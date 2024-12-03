@@ -1,0 +1,104 @@
+/* Reset and Body Styling */
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fefae0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*overflow: hidden; /* Prevent scrolling */
+}
+
+/* Main Content Styling */
+.content {
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 5vw;
+    color: #0a0a0a;
+}
+
+#cookie-count {
+    font-size: 10vw;
+    color: #c4042a;
+    font-weight: bold;
+}
+
+/* Cookie Stack Styling */
+.cookie-stack {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.cookie-row {
+    display: flex;
+    justify-content: center;
+    margin-top: -4vh; /* Slight overlap for pyramid effect */
+}
+
+.cookie-row img {
+    /* Dynamically adjust cookie size based on viewport width */
+    width: 5vw;
+    height: 5vw;
+    max-width: 90%; /* Limit the max size */
+    max-height: 100%;
+    margin: 0 -8px;
+    /*border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+
+    /* Animation for falling effect */
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.5s ease-out;
+}
+
+.cookie-row img.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fact Styling */
+.cookie-fact {
+    font-size: 2vw;
+    color: #606c38;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.noto-sans-hebrew-bets {
+  font-family: "Noto Sans Hebrew", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
