@@ -1,9 +1,4 @@
-const COOKIE_FACTS = [
-    "Those cookies would amount to about 12kg!",
-    "This amount of cookies can feed 8 grown adults for a day.",
-    "You've consumed enough cookies to fill a cookie jar for months!",
-    "That many cookies could cover a small table!"
-];
+
 
 // Fetch the number of cookies from the text file
 async function fetchCookieCount() {
@@ -75,7 +70,13 @@ function createCookieStack(count) {
 }
 
 // Display a random fact
-function displayRandomFact() {
+function displayRandomFact(count) {
+    console.log(count);
+    const COOKIE_FACTS = [
+    `This amount of sufganyot can feed about ${count/3} people for a day!`,
+];
+
+
     const factElement = document.getElementById('cookie-fact');
     const randomFact = COOKIE_FACTS[Math.floor(Math.random() * COOKIE_FACTS.length)];
     factElement.textContent = randomFact;
@@ -88,7 +89,7 @@ async function initializePage() {
     countElement.textContent = count;
 
     createCookieStack(count);
-    displayRandomFact();
+    displayRandomFact(count);
 }
 
 // Initialize the page on load

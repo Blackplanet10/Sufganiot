@@ -88,9 +88,10 @@ h1 {
 /* Fact Styling */
 .cookie-fact {
     font-size: 2vw;
-    color: #b54ced;
+    color: #0b0d0c;
     text-align: center;
     margin-top: 20px;
+    padding-bottom: 2vh;
 }
 /*.*/
 
