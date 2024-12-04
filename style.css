@@ -66,7 +66,7 @@ h1 {
 
 .cookie-row img {
     /* Dynamically adjust cookie size based on viewport width */
-    width: 5vw;
+    /*width: 5vw;*/
     height: 5vw;
     max-width: 90%; /* Limit the max size */
     max-height: 100%;
