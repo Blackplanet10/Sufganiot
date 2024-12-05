@@ -31,6 +31,10 @@ function createCookieStack(count) {
         remainingCookies -= totalRows;
     }
 
+    if(remainingCookies != 0){
+        totalRows++;
+    }
+
     // Reset remaining cookies to the total count for stacking
     remainingCookies = count;
 
@@ -46,7 +50,7 @@ function createCookieStack(count) {
         for (let i = 0; i < cookiesInRow; i++) {
             const img = document.createElement('img');
             img.src = `sufganiot/donut${getRandomIntInRange(1, 7)}.png`; // Cycle through cookie images
-            img.alt = 'Cookie';
+            img.alt = 'Sufganyha';
 
             if (Math.random() > 0.5) {
                 img.style.transform = 'scaleX(-1)';
@@ -73,7 +77,7 @@ function createCookieStack(count) {
 function displayRandomFact(count) {
     console.log(count);
     const COOKIE_FACTS = [
-    `This amount of sufganyot can feed about ${count/3} people for a day!`,
+    `!כמות כזו של סופגניות יכולה להאכיל ${Math.round(count/3)} אנשים מבוגרים ליום אחד`,
 ];
 
 
