@@ -24,7 +24,7 @@ function eatDonut(img){
 
 
 
-
+       img.style.height = '1em';
 
        let countElement = document.getElementById('cookie-count');
        console.log(countElement.innerText);
