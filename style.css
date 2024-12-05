@@ -64,6 +64,12 @@ h1 {
     margin-top: -4vh; /* Slight overlap for pyramid effect */
 }
 
+.cookie-row  crumbs{
+    opacity: 1;
+    transition: all 0.5s ease-in;
+
+}
+
 .cookie-row img {
     /* Dynamically adjust cookie size based on viewport width */
     width: 5em;

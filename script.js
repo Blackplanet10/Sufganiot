@@ -13,6 +13,26 @@ async function fetchCookieCount() {
     }
 }
 
+
+function eatDonut(img){
+
+   if(img.classList.contains('crumbs') == false){
+       img.onclick = null
+       img.classList.remove('loaded');
+       img.classList.add('crumbs');
+       img.src = `crumbs/crumbs${getRandomIntInRange(1, 3)}.png`; // Cycle through cookie images
+
+
+
+
+
+       let countElement = document.getElementById('cookie-count');
+       console.log(countElement.innerText);
+       countElement.innerHTML = countElement.innerText -1;
+    }
+
+}
+
 function getRandomIntInRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -48,15 +68,21 @@ function createCookieStack(count) {
         // Determine the number of cookies to place in the current row
         const cookiesInRow = Math.min(row, remainingCookies);
         for (let i = 0; i < cookiesInRow; i++) {
-            const img = document.createElement('img');
-            img.src = `sufganiot/donut${getRandomIntInRange(1, 7)}.png`; // Cycle through cookie images
-            img.alt = 'Sufganyha';
+                const img = document.createElement('img');
+                img.src = `sufganiot/donut${getRandomIntInRange(1, 7)}.png`; // Cycle through cookie images
+                img.alt = 'Sufganyha';
 
-            if (Math.random() > 0.5) {
-                img.style.transform = 'scaleX(-1)';
-            }
+                img.addEventListener("click", () => {
+                    eatDonut(img);
+                });
 
-            rowElement.appendChild(img);
+                if (Math.random() > 0.5) {
+                    img.style.transform = 'scaleX(-1)';
+                }
+
+                rowElement.appendChild(img);
+
+
 
 
             // Add "falling into place" animation with delay
